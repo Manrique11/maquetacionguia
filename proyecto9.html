@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>caja9</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .contenedor {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .barra-superior {
+      height: 30px;
+      width: 50%;
+      background-color: orange;
+      border-radius: 4px;
+    }
+
+    .barra-superior:nth-child(2) {
+      width: 40%;
+      background-color: grey;
+    }
+
+    .cuerpo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fila {
+      display: flex;
+      gap: 10px;
+    }
+
+    .col-izq {
+      width: 15%;
+      background-color: whitesmoke;
+      height: 100px;
+      border-radius: 4px;
+    }
+
+    .col-der {
+      flex: 1;
+      background-color: grey;
+      height: 100px;
+      border-radius: 4px;
+    }
+
+    .barra-inferior {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .barra-inferior .item {
+      flex: 1;
+      height: 100px;
+      background-color: orange;
+      border-radius: 4px;
+    }
+
+      .boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* o cambia a right: 20px si prefieres la otra esquina */
+  background-color: #0a0caa;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.boton-flotante:hover {
+  background-color: #1a1fdd;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Barras superiores -->
+    <div class="barra-superior"></div>
+    <div class="barra-superior"></div>
+
+    <!-- Cuerpo con tres filas -->
+    <div class="cuerpo">
+      <div class="fila">
+        <div class="col-izq"></div>
+        <div class="col-der"></div>
+      </div>
+      <div class="fila">
+        <div class="col-izq"></div>
+        <div class="col-der"></div>
+      </div>
+      <div class="fila">
+        <div class="col-izq"></div>
+        <div class="col-der"></div>
+      </div>
+    </div>
+
+    <!-- Barra inferior -->
+    <div class="barra-inferior">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </div>
+
+    <a href="index.html" class="boton-flotante" title="Volver al menú">🏠</a>
+</body>
+</html>

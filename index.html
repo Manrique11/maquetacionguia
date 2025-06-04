@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Inicio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0caa;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contenedor {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .boton, .enlace-boton {
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0a0caa;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .enlace-boton:hover, .boton:hover {
+      background-color: #dcdcff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <button class="boton">1</button>
+    <button class="boton">2</button>
+    <button class="boton">3</button>
+    <button class="boton">4</button>
+    <button class="boton">5</button>
+    <button class="boton">6</button>
+    <button class="boton">7</button>
+    <a href="proyecto8.html" class="enlace-boton">8</a>
+    <a href="proyecto9.html" class="enlace-boton">9</a>
+  </div>
+</body>
+</html>

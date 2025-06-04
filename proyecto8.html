@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>caja9</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-color: black; /* fondo exterior */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .contenedor {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .barra-contenedora {
+      background-color: grey; /* franja verde clara */
+      display: flex;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .contenedor-cajas {
+      display: flex;
+      gap: 10px;
+      margin-left: auto; /* esta línea empuja las cajas a la derecha */
+    }
+
+    .caja-barra {
+      background-color: orange;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    .caja1 { width: 60px; }
+    .caja2 { width: 40px; }
+    .caja3 { width: 140px; }
+    .caja4 { width: 100px; }
+    .caja5 { width: 40px; }
+
+    .caja-central {
+      flex: 1;
+      background-color: grey; /* zona principal */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      border-radius: 6px;
+    }
+
+    .fila-inferior {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .fila-inferior div {
+      width: 40px;
+      height: 40px;
+      background-color: orangered;
+      border-radius: 4px;
+    }
+
+    .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* o cambia a right: 20px si prefieres la otra esquina */
+    background-color: #0a0caa;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+
+.boton-flotante:hover {
+  background-color: #1a1fdd;
+}
+
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    
+    <div class="barra-contenedora">
+      <div class="contenedor-cajas">
+        <div class="caja-barra caja1"></div>
+        <div class="caja-barra caja2"></div>
+        <div class="caja-barra caja3"></div>
+        <div class="caja-barra caja4"></div>
+        <div class="caja-barra caja5"></div>
+      </div>
+    </div>
+
+    <div class="caja-central">
+      <div class="fila-inferior">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+  </div>
+    
+
+    <a href="index.html" class="boton-flotante" title="Volver al menú">🏠</a>
+
+</body>
+</html>
